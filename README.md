@@ -161,6 +161,22 @@ pub mod with_cryptography {
 }
 ```
 
+## Installation
+
+Standard usage :
+
+```toml
+[dependencies]
+rst-common = {version = "0.1.0"}
+```
+
+Example install `with-tokio` feature
+
+```toml
+[dependencies]
+rst-common = {version = "0.1.0", features: ["with-tokio"]}
+```
+
 ## Examples
 
 You can look at to `examples` directory to look at how to use this library.
