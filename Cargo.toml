@@ -70,3 +70,6 @@ required-features = ["with-tokio"]
 name = "with-errors"
 path = "examples/with-errors/main.rs"
 required-features = ["with-errors"]
+
+[package.metadata.docs.rs]
+all-features = true
