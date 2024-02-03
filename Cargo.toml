@@ -8,6 +8,10 @@ description = "A shortcut to common Rust crates"
 license-file = "LICENSE"
 keywords = ["crates", "common", "libraries"]
 categories = ["development-tools", "rust-patterns"]
+homepage = "https://docs.rs/rst-common"
+documentation = "https://docs.rs/rst-common"
+repository = "https://github.com/rstlix0x0/rst-common"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
