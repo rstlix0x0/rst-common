@@ -167,14 +167,14 @@ Standard usage :
 
 ```toml
 [dependencies]
-rst-common = {version = "0.1.0"}
+rst-common = {version = "1.0.0"}
 ```
 
 Example install `with-tokio` feature
 
 ```toml
 [dependencies]
-rst-common = {version = "0.1.0", features: ["with-tokio"]}
+rst-common = {version = "1.0.0", features: ["with-tokio"]}
 ```
 
 ## Examples
