@@ -2,7 +2,7 @@
 name = "rst-common"
 version = "1.0.0"
 edition = "2021"
-authors = ["rstlix0x0 <rstlix0x0.dev@gmail.com>"]
+authors = ["rstlix0x0 <rstlix.dev@gmail.com>"]
 rust-version = "1.74" 
 description = "A shortcut to common Rust crates"
 license-file = "LICENSE"
