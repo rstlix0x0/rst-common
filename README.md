@@ -11,6 +11,50 @@ So I was just thinking that rather than I'm always
 repeat my activities, such as finding the library, register it manually, and so on, I was thinking that it will be nice if I only need 
 to install a single crate which contains all of my favorite crates.
 
+## Installation
+
+Standard usage :
+
+```toml
+[dependencies]
+rst-common = {version = "1.1.0"}
+```
+
+Example install `with-tokio` feature
+
+```toml
+[dependencies]
+rst-common = {version = "1.1.0", features: ["with-tokio"]}
+```
+
+## Examples
+
+You can look at to `examples` directory to look at how to use this library.
+
+Codes
+
+```rust
+use rst_common::standard::uuid::Uuid;
+
+fn main() {
+    let uid = Uuid::new_v4();
+    println!("{}", uid)
+}
+```
+
+## Version Requirements
+
+All of used crates will follow these requirements
+
+- All crates below of `1.x` (`<1.0.0`), will maintain the version until the minor version, example: `~0.1`, which mean, all new updated `patch` version should be automatically updated, but not for `minor` version. The version `~0.1` will automatically update to `0.1.1` and so on, as long as the `minor` version is equal. The reason behind this rule is, any version below of `1.0.0` assumed still under active development, and to maintain compatibility, it will be guarded using it's `minor` version.  
+- All crates equal or greater than `1.x`, will maintain the version using it's major version, example: `~1`. For example, if we are using a crate that it's version: `1.0.1`, this rule should be updated automatically for the next version of: `1.0.2` or even `1.1.0`, but it will not follow the version `2.0.0` (assumed changed on `major` version will give us breaking compatibility)
+
+> **INFO**
+>
+> If there are any updated versions to the supported crates, it will be updated manually through this library
+
+For example, now we're support `tokio: ~1`, it means if the `tokio` library release it's new major version: `2.0.0`, this crate will updated manually to support latest versions
+
 ## Categories (Feature Flags)
 
 - `standard`
@@ -158,36 +202,5 @@ pub mod with_cryptography {
     pub use ring;
     pub use ed25519_dalek;
     pub use x25519_dalek;
-}
-```
-
-## Installation
-
-Standard usage :
-
-```toml
-[dependencies]
-rst-common = {version = "1.0.0"}
-```
-
-Example install `with-tokio` feature
-
-```toml
-[dependencies]
-rst-common = {version = "1.0.0", features: ["with-tokio"]}
-```
-
-## Examples
-
-You can look at to `examples` directory to look at how to use this library.
-
-Codes
-
-```rust
-use rst_common::standard::uuid::Uuid;
-
-fn main() {
-    let uid = Uuid::new_v4();
-    println!("{}", uid)
 }
 ```
