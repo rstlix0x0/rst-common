@@ -33,7 +33,7 @@ You can look at to `examples` directory to look at how to use this library.
 
 Codes
 
-```rust
+```ignore
 use rst_common::standard::uuid::Uuid;
 
 fn main() {
@@ -41,6 +41,43 @@ fn main() {
     println!("{}", uid)
 }
 ```
+
+### Special Crates
+
+> **WARNING**
+>
+> Special crates means, there are spesific ways to use, like `thiserror` and `serde`. 
+> These crates need a "special" way to use because of their `proc_macro` usages.
+
+---
+
+#### `thiserror`
+
+```ignore
+use rst_common::with_errors::thiserror:{self, Error};
+
+#[derive(Error)]
+enum MyError {
+    #[error("general error")]
+    GeneralError,
+}
+```
+
+Need to use `self` which give the compiler a signal that the `Error` macro comes from the `thiserror` and the crate exists 
+
+#### `serde`
+
+```ignore
+use rst_common::standard::serde::{self, Serialize, Deserialize};
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(crate = "self::serde")]
+struct Message {
+    msg: String,
+}
+```
+
+Spesific for the `serde` crate, since this crate depends on `serde_derive` which call the `serde::`, we need to explicitly tell the `serde` the used crate path. 
 
 ## Version Requirements
 
