@@ -17,14 +17,14 @@ Standard usage :
 
 ```toml
 [dependencies]
-rst-common = {version = "1.1.1"}
+rst-common = {version = "1.2.0"}
 ```
 
 Example install `with-tokio` feature
 
 ```toml
 [dependencies]
-rst-common = {version = "1.1.1", features: ["with-tokio"]}
+rst-common = {version = "1.2.0", features: ["with-tokio"]}
 ```
 
 ## Examples
@@ -237,6 +237,7 @@ pub mod with_cryptography {
     pub use blake3;
     pub use argon2;
     pub use ring;
+    pub use sha2;
     pub use ed25519_dalek;
     pub use x25519_dalek;
 }

@@ -98,6 +98,7 @@ pub mod with_cryptography {
     pub use blake3;
     pub use argon2;
     pub use ring;
+    pub use sha2;
     pub use ed25519_dalek;
     pub use x25519_dalek;
 }
