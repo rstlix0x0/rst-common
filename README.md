@@ -17,14 +17,14 @@ Standard usage :
 
 ```toml
 [dependencies]
-rst-common = {version = "1.2.1"}
+rst-common = {version = "1.3.0"}
 ```
 
 Example install `with-tokio` feature
 
 ```toml
 [dependencies]
-rst-common = {version = "1.2.0", features: ["with-tokio"]}
+rst-common = {version = "1.3.0", features: ["with-tokio"]}
 ```
 
 ## Examples
@@ -48,6 +48,10 @@ fn main() {
 >
 > Special crates means, there are spesific ways to use, like `thiserror` and `serde`. 
 > These crates need a "special" way to use because of their `proc_macro` usages.
+
+> **WARNING**
+>
+> Remove package `mockall`
 
 ---
 
@@ -207,7 +211,6 @@ pub mod with_errors {
 ```rust
 #[cfg(feature = "with-tests")]
 pub mod with_tests {
-    pub use mockall;
     pub use table_test;
 }
 ```

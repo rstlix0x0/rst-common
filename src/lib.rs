@@ -33,7 +33,6 @@ pub mod full {
     pub use log;
     pub use anyhow;
     pub use thiserror;
-    pub use mockall;
     pub use table_test;
     pub use axum;
     pub use hyper;
@@ -76,7 +75,6 @@ pub mod with_errors {
 
 #[cfg(feature = "with-tests")]
 pub mod with_tests {
-    pub use mockall;
     pub use table_test;
 }
 
