@@ -17,7 +17,7 @@ Standard usage :
 
 ```toml
 [dependencies]
-rst-common = {version = "1.3.0"}
+rst-common = {version = "1.4.0"}
 ```
 
 Example install `with-tokio` feature
