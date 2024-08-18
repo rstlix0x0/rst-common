@@ -1,6 +1,6 @@
 [package]
 name = "rst-common"
-version = "1.5.0"
+version = "1.5.1"
 edition = "2021"
 authors = ["rstlix0x0 <rstlix.dev@gmail.com>"]
 rust-version = "1.74" 
@@ -20,7 +20,7 @@ bytes = {"version" = "~1", features = ["serde"]}
 serde = {"version" = "~1", features = ["derive"] }
 serde_json = {"version" = "~1"}
 erased-serde = {"version" = "~0.4"}
-reqwest = {version = "~0.12.5"}
+reqwest = {version = "~0.12.5", features=["json"]}
 uuid = { version = "~1", features = ["v4", "fast-rng", "macro-diagnostics", "serde"] }
 chrono = {version = "~0.4", features=["serde"]}
 dyn-clone = {version = "~1"}
