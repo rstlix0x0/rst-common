@@ -15,6 +15,7 @@ pub mod standard {
     pub use serde_json;
     pub use uuid;
     pub use bytes;
+    pub use reqwest;
 }
 
 #[cfg(feature = "full")]
